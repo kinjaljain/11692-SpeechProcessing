@@ -1,0 +1,69 @@
+welcome_1: Welcome to Kinjal's Pizza place. Would you like to order a pizza?
+welcome_2: Greetings! Welcome to Kinjal's Pizza place. I am Helen. Would you like a pizza?
+welcome_3: Hi! Welcome to Kinjal's Pizza place. Do you want to order a pizza?
+welcome_4: Welcome to Kinjal's Pizza place. Are you here to order a pizza?
+
+ask_size_1: What size would you like? We have regular, medium and large.
+ask_size_2: We have three different sizes regular, medium and large. Which one would you like?
+ask_size_multiple: What size do you want for this pizza? Please choose between regular, medium and large.
+
+out_of_options_size: I am afraid we do not have that size. Please choose between regular, medium and large.
+
+possible_toppings: We have Sausage, Pepperoni, Bacon, Ham, Meatballs, Mushrooms, Onions, Olives, HotPeppers, Jalapeno,
+  Tomatoes, Capsicum, Corn,  Spinach, Broccoli, Pineapple, Tofu, Paneer, steak and shrimps. Let me know which
+  ones you like.
+
+want_toppings_or_not: Do you want any toppings or not? Please respond with yes or no.
+
+ask_toppings_1: What toppings would you like? you can pick upto 4 different toppings.
+ask_toppings_2: Could you tell me which toppings would you like? you may choose upto 4 toppings.
+
+get_toppings_1: What toppings would you like for the {number} one?
+get_toppings_2: Could you tell me which toppings would you like for {number} one?
+get_toppings_3: Which toppings do you want for {number} one?
+
+out_of_options_topping: Oh we don't offer {{ toppings }}. We offer Sausage, Pepperoni, Bacon, Ham,
+  Meatballs, Mushrooms, Onions, Olives, Jalapeno, Tomatoes, Capsicum, Corn,  Spinach, Broccoli, Pineapple,
+  Tofu, Paneer, steak and shrimps. Which one of these would you like?
+
+more_than_4_topping: Sorry, but you can't choose more than 4 toppings. Please name any 4.
+
+unusual_topping_remark: Umm {{ unusual_topping }} on pizza? Its pretty unusual! But, I'm sure we can add that for you.
+
+ask_crust_1: What crust would you like? We have thin crust, thick crust, cheese crust and focaccia crust.
+ask_crust_2:  What about the crust? We offer three types- thin crust, thick crust, cheese crust and focaccia crust.
+ask_crust_multiple: Which crust do you want for this pizza?
+
+out_of_options_crust: We do not serve that crust. Please choose between thin, thick, cheese and focaccia crust.
+
+ask_drink: Would you like to have any drinks? We serve coke and our special homemade lemonade.
+out_of_options_drink: We do not serve {{ drink }}. Please choose between coke and lemonade.
+drink_yes: Which one would you like? Please choose between coke and lemonade.
+drink_yes_intent: Got it!
+drink_no_intent: okay.
+
+confirm_order: .. So, I've got your order details. Do you want me to repeat it to you?
+
+confirm_order_details_1: You've ordered {{ number }} pizza.
+confirm_order_without_topping_1: .. The size of the pizza is {{ size }},  crust is {{ crust }}, and it has are no toppings
+confirm_order_in_detail: .. The size of the pizza is {{ size }},  crust is {{ crust }},  and toppings are
+  {{ toppings|join(", ") }}
+
+confirm_order_details_many: You've ordered {{ number }} pizzas.
+confirm_order_without_topping_many: .. For the {{ i }} pizza, size is {{ size }},  crust is {{ crust }},  and it has no
+  toppings
+confirm_order_many_in_detail: .. For the {{ i }} pizza, size is {{ size }},  crust is {{ crust }},  and toppings
+  are {{ toppings|join(", ")  }}
+
+order_more_1: .. Would you like to order one more pizza?
+order_more_2: .. Would you like to order another pizza?
+
+ask_if_same_as_previous: Would you want to have the same size, crust and toppings as previous pizza? Please say yes or no.
+confirm_added_another_pizza: OK, I've added another pizza to your order
+
+no_pizza_order: Sorry, we only serve pizza. Call us to place a pizza order in future. Have a nice day!
+end: Thankyou for ordering, have a nice day!
+end_no_drink: Okay! Your pizza will be ready in 15 minutes. Thankyou for choosing Kinjal's Pizza place and we hope you order soon again!
+confirm_drink: Cool, {{ drink }} it is!
+confirm_drink_glasses: Cool, {{ number }} glasses of {{ drink }}  it is!
+end_with_drink: .. Your pizza and drink will be ready in 15 minutes. Thankyou for choosing Kinjal's Pizza place and we hope you order soon again!

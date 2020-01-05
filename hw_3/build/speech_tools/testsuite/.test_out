@@ -1,0 +1,365 @@
+rm -rf tmp
+mkdir tmp
+remake libraries ../lib/libestools.a
+Making in directory ./audio ...
+Making in directory ./utils ...
+Making in directory ./base_class ...
+Making in directory base_class/string ...
+Making in directory base_class/inst_tmpl ...
+Making in directory ./ling_class ...
+Making in directory ./speech_class ...
+Making in directory ./sigpr ...
+Making in directory sigpr/pda ...
+Making in directory ./stats ...
+Making in directory stats/kalman_filter ...
+Making in directory stats/wagon ...
+Making in directory ./grammar ...
+Making in directory grammar/ngram ...
+Making in directory grammar/scfg ...
+Making in directory grammar/wfst ...
+Making in directory ./intonation ...
+Making in directory intonation/tilt ...
+Making in directory ./siod ...
+Making in directory ./rxp ...
+build xml (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES xml_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o xml_example xml_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES xml_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o xml_regression xml_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test xml (module)
+xml_example completed
+xml example status: CORRECT
+xml_regression completed
+xml regression status: CORRECT
+
+
+build string (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES string_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o string_example string_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES string_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o string_regression string_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test string (module)
+string_example completed
+string example status: CORRECT
+string_regression completed
+string regression status: CORRECT
+
+
+build hash (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES hash_example.cc
+In file included from hash_example.cc:142:
+./../base_class/EST_THash.cc:132:8: warning: instantiation of variable 'EST_THash<EST_String, int>::Dummy_Value' required here, but no definition is available [-Wundefined-var-template]
+return Dummy_Value;
+       ^
+../include/EST_THash.h:144:45: note: in instantiation of member function 'EST_THash<EST_String, int>::val' requested here
+  V &val(const K &key) const {int x; return val(key, x); }
+                                            ^
+hash_example.cc:77:42: note: in instantiation of member function 'EST_THash<EST_String, int>::val' requested here
+cout << "length of `fred' = " << lengths.val("fred") << "\n";
+                                         ^
+../include/EST_THash.h:100:12: note: forward declaration of template entity is here
+  static V Dummy_Value;
+           ^
+1 warning generated.
+g++  -fno-implicit-templates    -O3 -Wall    -o hash_example hash_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES hash_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o hash_regression hash_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test hash (module)
+hash_example completed
+hash example status: CORRECT
+hash_regression completed
+hash regression status: CORRECT
+
+
+build pathname (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES pathname_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o pathname_example pathname_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES pathname_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o pathname_regression pathname_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test pathname (module)
+pathname_example completed
+pathname example status: CORRECT
+pathname_regression completed
+pathname regression status: CORRECT
+
+
+build track (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES track_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o track_example track_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES track_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o track_regression track_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test track (module)
+track_example completed
+track example status: CORRECT
+track_regression completed
+track regression status: CORRECT
+
+
+build token (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES token_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o token_example token_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES token_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o token_regression token_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test token (module)
+token_example completed
+token example status: CORRECT
+token_regression completed
+token regression status: CORRECT
+
+
+build complex (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES complex_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o complex_example complex_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES complex_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o complex_regression complex_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test complex (module)
+complex_example completed
+complex example status: CORRECT
+complex_regression completed
+complex regression status: CORRECT
+
+
+build list (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES list_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o list_example list_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES list_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o list_regression list_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test list (module)
+list_example completed
+list example status: CORRECT
+list_regression completed
+list regression status: CORRECT
+
+
+build kvl (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES kvl_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o kvl_example kvl_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES kvl_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o kvl_regression kvl_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test kvl (module)
+kvl_example completed
+kvl example status: CORRECT
+kvl_regression completed
+kvl regression status: CORRECT
+
+
+build handle (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES handle_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o handle_example handle_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES handle_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o handle_regression handle_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test handle (module)
+handle_example completed
+handle example status: CORRECT
+handle_regression completed
+handle regression status: CORRECT
+
+
+build named_enum (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES named_enum_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o named_enum_example named_enum_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES named_enum_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o named_enum_regression named_enum_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test named_enum (module)
+named_enum_example completed
+named_enum example status: CORRECT
+named_enum_regression completed
+named_enum regression status: CORRECT
+
+
+build deq (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES deq_example.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o deq_example deq_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES deq_regression.cc
+g++  -fno-implicit-templates    -O3 -Wall    -o deq_regression deq_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test deq (module)
+deq_example completed
+deq example status: CORRECT
+deq_regression completed
+deq regression status: CORRECT
+
+
+build ling (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES ling_example.cc
+In file included from ling_example.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+In file included from ../include/ling_class/EST_Relation.h:48:
+../include/ling_class/EST_Item.h:317:18: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+       { return (this == 0) ? 0 : p_relation; }
+                 ^~~~    ~
+In file included from ling_example.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+../include/ling_class/EST_Relation.h:122:46: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    const EST_String &name() const { return (this == 0) ? EST_String::Empty : p_name; }
+                                             ^~~~    ~
+../include/ling_class/EST_Relation.h:125:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *head() const {return (this == 0) ? 0 : p_head;}
+                                    ^~~~    ~
+../include/ling_class/EST_Relation.h:131:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *tail() const {return (this == 0) ? 0 : p_tail;}
+                                    ^~~~    ~
+4 warnings generated.
+g++  -fno-implicit-templates    -O3 -Wall    -o ling_example ling_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES ling_regression.cc
+In file included from ling_regression.cc:34:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+In file included from ../include/ling_class/EST_Relation.h:48:
+../include/ling_class/EST_Item.h:317:18: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+       { return (this == 0) ? 0 : p_relation; }
+                 ^~~~    ~
+In file included from ling_regression.cc:34:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+../include/ling_class/EST_Relation.h:122:46: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    const EST_String &name() const { return (this == 0) ? EST_String::Empty : p_name; }
+                                             ^~~~    ~
+../include/ling_class/EST_Relation.h:125:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *head() const {return (this == 0) ? 0 : p_head;}
+                                    ^~~~    ~
+../include/ling_class/EST_Relation.h:131:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *tail() const {return (this == 0) ? 0 : p_tail;}
+                                    ^~~~    ~
+4 warnings generated.
+g++  -fno-implicit-templates    -O3 -Wall    -o ling_regression ling_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test ling (module)
+ling_example completed
+ling example status: CORRECT
+ling_regression completed
+ling regression status: CORRECT
+
+
+build feature (module)
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES feature_example.cc
+In file included from feature_example.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+In file included from ../include/ling_class/EST_Relation.h:48:
+../include/ling_class/EST_Item.h:317:18: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+       { return (this == 0) ? 0 : p_relation; }
+                 ^~~~    ~
+In file included from feature_example.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+../include/ling_class/EST_Relation.h:122:46: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    const EST_String &name() const { return (this == 0) ? EST_String::Empty : p_name; }
+                                             ^~~~    ~
+../include/ling_class/EST_Relation.h:125:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *head() const {return (this == 0) ? 0 : p_head;}
+                                    ^~~~    ~
+../include/ling_class/EST_Relation.h:131:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *tail() const {return (this == 0) ? 0 : p_tail;}
+                                    ^~~~    ~
+4 warnings generated.
+g++  -fno-implicit-templates    -O3 -Wall    -o feature_example feature_example.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+g++ -c -fno-implicit-templates -O3 -Wall -DDATA="\"/Users/kinjal/Desktop/Fall2019/11-692/hw_3/build/speech_tools/lib/example_data\"" -DTVECTOR_BOUNDS_CHECKING -I../include -DINSTANTIATE_TEMPLATES feature_regression.cc
+In file included from feature_regression.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+In file included from ../include/ling_class/EST_Relation.h:48:
+../include/ling_class/EST_Item.h:317:18: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+       { return (this == 0) ? 0 : p_relation; }
+                 ^~~~    ~
+In file included from feature_regression.cc:35:
+In file included from ../include/EST_ling_class.h:44:
+In file included from ../include/ling_class/EST_Utterance.h:44:
+../include/ling_class/EST_Relation.h:122:46: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    const EST_String &name() const { return (this == 0) ? EST_String::Empty : p_name; }
+                                             ^~~~    ~
+../include/ling_class/EST_Relation.h:125:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *head() const {return (this == 0) ? 0 : p_head;}
+                                    ^~~~    ~
+../include/ling_class/EST_Relation.h:131:37: warning: 'this' pointer cannot be null in well-defined C++ code; comparison may be assumed to always evaluate to false [-Wtautological-undefined-compare]
+    EST_Item *tail() const {return (this == 0) ? 0 : p_tail;}
+                                    ^~~~    ~
+4 warnings generated.
+g++  -fno-implicit-templates    -O3 -Wall    -o feature_regression feature_regression.o    -L../lib -lestools -L../lib -lestbase -L../lib -leststring   -lncurses -framework CoreAudio -framework AudioUnit -framework AudioToolbox -framework Cocoa    -lm  -lstdc++  
+test feature (module)
+feature_example completed
+feature example status: CORRECT
+feature_regression completed
+feature regression status: CORRECT
+
+
+test ch_wave (script)
+esps 
+snd 
+riff 
+audlab 
+aiff 
+est 
+raw
+byte order
+63+1 records in
+63+1 records out
+32292 bytes transferred in 0.000319 secs (101227552 bytes/sec)
+stdio
+subrange
+channels
+default file type
+keylab divide and extract
+info and help
+ch_wave script completed
+ch_wave script status: CORRECT
+
+
+test ch_track (script)
++ echo
++ test_conversions
++ echo conversion
+conversion
++ /bin/rm -f tmp/ch_track.htk tmp/ch_track.track
++ ../bin/ch_track -otype htk ../lib/example_data/ch_track.htk -o tmp/ch_track.htk
++ ../bin/ch_track -otype esps tmp/ch_track.htk -o tmp/ch_track.track
++ ../bin/ch_track -otype htk tmp/ch_track.track -o tmp/ch_track.htk2
++ cmp tmp/ch_track.htk tmp/ch_track.htk2
++ echo ch_track htk to esps to nist: pass
++ ../bin/ch_track -otype ascii tmp/ch_track.htk -o tmp/ch_track.track
++ ../bin/ch_track -itype ascii -s 0.010 -otype htk_fbank tmp/ch_track.track -o tmp/ch_track.htk2
++ ../bin/ch_track -otype ascii tmp/ch_track.htk2 -o tmp/ch_track.ascii
++ cmp tmp/ch_track.track tmp/ch_track.ascii
++ echo ch_track htk to ascii to htk: pass
++ ../bin/ch_track -otype htk ../lib/example_data/ch_track.htk -o tmp/ch_track.htk
++ ../bin/ch_track -otype htk_user tmp/ch_track.htk -o tmp/ch_track.track
++ ../bin/ch_track -otype htk tmp/ch_track.track -o tmp/ch_track.htk2
++ cmp tmp/ch_track.htk tmp/ch_track.htk2
++ echo ch_track htk to htk_user to htk: pass
++ test_info
++ echo info and help
+info and help
++ ../bin/ch_track -info ../lib/example_data/ch_track.htk
++ ../bin/ch_track -h
++ ../bin/ch_track ../lib/example_data/ch_track.htk -otype esps -o tmp/ch_track.esps
++ ../bin/ch_track -info ../lib/example_data/ch_track.htk tmp/ch_track.esps
++ exit 0
+ch_track script completed
+ch_track script status: CORRECT
+
+
+test viterbi (script)
+viterbi script completed
+viterbi script status: CORRECT
+
+
+test wagon (script)
+regression tree
+wagon script completed
+2a3
+> wagon: -omp_nthreads ignored: not supported in this build.
+wagon script status: INCORRECT
+
+
+test tilt (script)
+tilt script completed
+tilt script status: CORRECT
+
+
+test lpc (script)
+LPC params
+MFCC params
+lpc script completed
+lpc script status: CORRECT
+
+

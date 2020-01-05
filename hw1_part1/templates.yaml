@@ -1,0 +1,24 @@
+welcome: Welcome to memory game. I'm going to say three numbers for you to repeat backwards. Ready?
+
+win_1: Good job! Would you like to play again?
+win_2: Congratulations! You are correct! Would you like to play again?
+win_3: Awesome! Do you want to play again?
+
+ask_question_1: Can you repeat the numbers {{ numbers|join(", ") }} backwards?
+ask_question_2: Please repeat the numbers {{ numbers|join(", ") }} backwards?
+ask_question_3: Could you please repeat the numbers {{ numbers|join(", ") }} backwards?
+
+lose_1: Sorry, that's the wrong answer. Would you like to play again?
+lose_2: I'm afraid that's not correct! Would you like to start over?
+lose_3: Oops, wrong answer! Do you want to play again?
+
+end: Okay, Bye! See you next time!
+
+uhh no
+no that would be all
+na
+no
+no i dont want anything more
+no its fine
+no i trust you
+no i dont want

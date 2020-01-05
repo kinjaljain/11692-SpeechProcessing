@@ -1,0 +1,37 @@
+This file contains any messages produced by compilers while
+running configure, to aid debugging if configure makes a mistake.
+
+configure:573: checking host system type
+configure:594: checking target system type
+configure:612: checking build system type
+configure:637: checking for gcc
+configure:750: checking whether the C compiler (gcc  ) works
+configure:766: gcc -o conftest    conftest.c  1>&5
+configure:763:1: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+main(){return(0);}
+^
+1 warning generated.
+configure:792: checking whether the C compiler (gcc  ) is a cross-compiler
+configure:797: checking whether we are using GNU C
+configure:806: gcc -E conftest.c
+configure:825: checking whether gcc accepts -g
+configure:862: checking for ranlib
+configure:898: checking for ar
+configure:929: checking whether byte ordering is bigendian
+configure:947: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure:962: gcc -c -g -O2 -Wall  conftest.c 1>&5
+configure:957:2: error: use of undeclared identifier 'not'
+ not big endian
+ ^
+1 error generated.
+configure: failed program was:
+#line 951 "configure"
+#include "confdefs.h"
+#include <sys/types.h>
+#include <sys/param.h>
+int main() {
+
+#if BYTE_ORDER != BIG_ENDIAN
+ not big endian
+#endif
+; return 0; }
